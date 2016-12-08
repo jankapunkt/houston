@@ -21,7 +21,7 @@ Houston._setup_collection = (collection) ->
       @ready()
       return
     try
-      collection.find(filter, sort: sort, limit: limit)
+      collection.find(filter, sort: sort)
     catch e
       console.log e
 
