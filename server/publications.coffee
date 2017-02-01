@@ -6,6 +6,10 @@ ADDED_COLLECTIONS = {}
 Houston._publish = (name, func) ->
   Meteor.publish Houston._houstonize(name), func
 
+
+Houston._clear = () ->
+  Houston._collections.collections.remove({});
+
 Houston._setup_collection = (collection) ->
   name = collection._name
   return if name of ADDED_COLLECTIONS
